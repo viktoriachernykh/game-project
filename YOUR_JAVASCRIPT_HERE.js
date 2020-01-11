@@ -141,6 +141,12 @@ enemy.addEventListener('click', healthDamage)
 
 function healthDamage() {
   hero.health = Number(hero.health) - 1
+  if (hero.health < 2) {
+    window.alert("Look at your health. You need to rest!")
+  }
+  if (hero.health < 1) {
+    window.alert("You lose!")
+  }
   if (hero.inventory.length < 1) {
     window.alert("Pick some items before fighting the enemy!")
   }
